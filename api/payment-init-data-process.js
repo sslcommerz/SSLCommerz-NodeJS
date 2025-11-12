@@ -6,7 +6,7 @@ const paymentInitDataProcess = (data) => {
     //required//
     postData['store_id'] = data.store_id;
     postData['store_passwd'] = data.store_passwd;
-    postData['product_category'] = data.productcategory;
+    postData['product_category'] = data.product_category;
     postData['tran_id'] = data.tran_id;
     postData['total_amount'] = data.total_amount;
     postData['currency'] = data.currency;
