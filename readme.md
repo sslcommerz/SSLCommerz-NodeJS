@@ -76,7 +76,7 @@ app.listen(port, () => {
 
 app.get('/validate', (req, res) => {
     const data = {
-        val_id:ADGAHHGDAKJ456454 //that you go from sslcommerz response
+        val_id: 'ADGAHHGDAKJ456454' //that you got from sslcommerz response
     };
     const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
     sslcz.validate(data).then(data => {
@@ -92,10 +92,10 @@ app.get('/validate', (req, res) => {
 
 app.get('/initiate-refund', (req, res) => {
     const data = {
-        refund_amount:10,
-        refund_remarks:'',
-        bank_tran_id:CB5464321445456456,
-        refe_id:EASY5645415455,
+        refund_amount: 10,
+        refund_remarks: '',
+        bank_tran_id: 'CB5464321445456456',
+        refe_id: 'EASY5645415455',
     };
     const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
     sslcz.initiateRefund(data).then(data => {
@@ -111,7 +111,7 @@ app.get('/initiate-refund', (req, res) => {
 
 app.get('/refund-query', (req, res) => {
     const data = {
-        refund_ref_id:SL4561445410,
+        refund_ref_id: 'SL4561445410',
     };
     const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
     sslcz.refundQuery(data).then(data => {
@@ -127,7 +127,7 @@ app.get('/refund-query', (req, res) => {
 //you also use this as internal method
 app.get('/transaction-query-by-transaction-id', (req, res) => {
     const data = {
-        tran_id:AKHLAKJS5456454,
+        tran_id: 'AKHLAKJS5456454',
     };
     const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
     sslcz.transactionQueryByTransactionId(data).then(data => {
@@ -143,7 +143,7 @@ app.get('/transaction-query-by-transaction-id', (req, res) => {
 //you also use this as internal method
 app.get('/transaction-query-by-session-id', (req, res) => {
     const data = {
-        sessionkey:AKHLAKJS5456454,
+        sessionkey: 'AKHLAKJS5456454',
     };
     const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
     sslcz.transactionQueryBySessionId(data).then(data => {
